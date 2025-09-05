@@ -47,18 +47,18 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
             type="text"
             value={newText}
             onChange={(e) => setNewText(e.target.value)}
-            className="flex-grow bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-grow bg-gray-800 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 "
             autoFocus
           />
           <button
             onClick={handleUpdate}
-            className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md transition-colors"
+            className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer"
           >
             Save
           </button>
           <button
             onClick={handleCancel}
-            className="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-md transition-colors"
+            className="bg-gray-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-md transition-colors cursor-pointer"
           >
             Cancel
           </button>
@@ -72,7 +72,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
               type="checkbox"
               checked={task.completed}
               onChange={() => toggleTaskStatus(task.id)}
-              className=" w-6 h-4 rounded"
+              className=" w-6 h-4 rounded cursor-pointer"
             />
             <span
               className={`flex-grow ${
@@ -87,13 +87,13 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
             <button
               onClick={() => setIsEditing(true)}
               disabled={task.completed} //when task is completed then edit option must be disabled
-              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-3 rounded-md transition-colors text-sm disabled:opacity-30"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-3 rounded-md transition-colors text-sm disabled:opacity-30 cursor-pointer"
             >
               ✏️ Edit
             </button>
             <button
               onClick={handleDelete}
-              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-3 rounded-md transition-colors text-sm"
+              className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-3 rounded-md transition-colors text-sm cursor-pointer"
             >
               🗑️ Delete
             </button>
