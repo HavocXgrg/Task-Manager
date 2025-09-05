@@ -86,7 +86,8 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
           <div className="flex items-center justify-end sm:justify-start gap-2 flex-shrink-0">
             <button
               onClick={() => setIsEditing(true)}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-3 rounded-md transition-colors text-sm"
+              disabled={task.completed} //when task is completed then edit option must be disabled
+              className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-1 px-3 rounded-md transition-colors text-sm disabled:opacity-30"
             >
               ✏️ Edit
             </button>
